@@ -27,7 +27,7 @@
 
 Here’s a screenshot of the program showing how the program works:
 
-![time_calculator example](https://github.com/user-attachments/assets/e3812032-5c5a-41cb-b5dd-8c206ded4bc9)
+<!-- ![time_calculator example](https://github.com/user-attachments/assets/e3812032-5c5a-41cb-b5dd-8c206ded4bc9) -->
 
 ![time_calculator_example_gif](https://github.com/user-attachments/assets/2c6ac238-1683-408d-be2d-ac6b52fff463)
 
@@ -55,7 +55,8 @@ dart compile exe lib/time_calculator.dart
 
    ```bash
    dart compile exe lib/time_calculator.dart -o time_calculator
-      This generates a native executable (`time_calculator`) that doesn't require `dartaotruntime`.
+   ```
+   This generates a native executable (`time_calculator`) that doesn't require `dartaotruntime`.
 
 2. Make the file executable:
 
@@ -63,7 +64,8 @@ dart compile exe lib/time_calculator.dart
    chmod +x time_calculator
   ```
 
-Now you can directly execute the time_calculator file from the terminal without additional commands. This is a more robust solution for production use.
+  You can directly execute the time_calculator file from the terminal without additional commands. This is a more robust solution for production use.
+
 
 
 For more details, see the [Dart dartaotruntime documentation](https://dart.dev/tools/dartaotruntime).
