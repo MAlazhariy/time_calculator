@@ -15,7 +15,7 @@
 ## Features
 
 - **Time Calculation**: Add multiple time entries in `hh:mm:ss` **or** `hh:mm` format and get the total time worked.
-- **Earnings Calculation**: Enter your hourly rate to calculate your total earnings based on the time worked.
+- **Price Calculation**: Enter your hourly rate to calculate your total price based on the time worked.
 
 ## How to Use
 
