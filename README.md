@@ -46,7 +46,7 @@ If you want to compile the application yourself, follow these instructions:
 ### For Windows:
 
 ```bash
-dart compile exe lib/time_calculator.dart
+dart compile exe lib/time_calculator.dart -o time_calculator.exe
 ```
 
 ### For macOS:
