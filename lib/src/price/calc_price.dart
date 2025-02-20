@@ -9,7 +9,7 @@ void calcPrice() {
 
   print('');
   print('- [Enter] to calc for [${hours.text}:${mins.text}].');
-  print('- Or type a time as format (hh:mm)');
+  print('- Or type a time (hh:mm)');
   final input = stdin.readLineSync()!;
   int h = hours;
   int m = mins;

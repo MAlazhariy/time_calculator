@@ -14,13 +14,14 @@ import 'package:calc_hours/src/execute.dart';
 /// Now you can directly execute the time_calculator file from the terminal
 /// without any additional commands.
 /// This is a more robust solution for production use.
+///
+/// see https://dart.dev/tools/dartaotruntime for more.
 
 // dart compile aot-snapshot lib/time_calculator.dart -o time_calculator.snapshot
 // dartaotruntime time_calculator.aot
-// https://dart.dev/tools/dartaotruntime
 
 
-
+List<String> times = [];
 int totalMins = 0;
 int totalSeconds = 0;
 int hours = 0;

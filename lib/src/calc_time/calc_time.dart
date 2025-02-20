@@ -1,14 +1,19 @@
 import 'package:calc_hours/common/extensions.dart';
+import 'package:calc_hours/src/calc_time/calc_avg.dart';
 import 'package:calc_hours/src/calc_time/get_time_multi_lines.dart';
 import 'package:calc_hours/time_calculator.dart';
 
-void calcTimes([bool add = false]) {
+void calcTimes({
+  bool add = false,
+  bool calcAverage = true,
+}) {
   if (!add) {
     totalMins = 0;
     totalSeconds = 0;
     hours = 0;
     mins = 0;
     secs = 0;
+    times.clear();
   }
 
   if (!add) {
@@ -16,26 +21,22 @@ void calcTimes([bool add = false]) {
   } else {
     print('Enter times to add to "${hours.text}:${mins.text}:${secs.text}":');
   }
-  final times = getTimesMultiLines();
+  times = getTimesMultiLines();
 
   // Calculate equation
-  if (!add) {
-    totalSeconds = calculateTotalSecs(times);
-  } else {
-    totalSeconds += calculateTotalSecs(times);
-  }
+  totalSeconds += calculateTotalSecs(times);
   totalMins = calculateTotalMins(totalSeconds);
   hours = calcHours(totalSeconds);
   mins = calcMins(totalSeconds);
   secs = calcSeconds(totalSeconds);
 
   print('----------');
-  print('-> $totalMins minutes');
-  print('-> ${hours.text}:${mins.text}:${secs.text}');
+  print('⏱️ ${hours.text}:${mins.text}:${secs.text}');
+  if(calcAverage) calcAvg();
   print('----------');
 }
 
-void calcAddTimes() => calcTimes(true);
+void calcAddTimes() => calcTimes(add: true);
 
 int calculateTotalSecs(List<String> times) {
   int totalSecs = 0;
