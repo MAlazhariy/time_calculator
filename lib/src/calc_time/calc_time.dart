@@ -31,7 +31,7 @@ void calcTimes({
   secs = calcSeconds(totalSeconds);
 
   print('----------');
-  print('⏱️ ${hours.text}:${mins.text}:${secs.text}');
+  print('-> ${hours.text}:${mins.text}:${secs.text}');
   if(calcAverage) calcAvg();
   print('----------');
 }
