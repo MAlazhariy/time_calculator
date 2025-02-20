@@ -50,7 +50,7 @@ If you want to compile the application yourself, follow these instructions:
 ### For Windows:
 
 ```bash
-dart compile exe lib/time_calculator.dart -o ./script_files/windows/time_calculator
+dart compile exe lib/time_calculator.dart -o ./script_files/windows/time_calculator.exe
 ```
 
 ### For macOS:
