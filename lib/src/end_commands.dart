@@ -26,7 +26,7 @@ Function? endCommands() {
       case 'a':
         return calcAddTimes;
       case 'q':
-        break task;
+        return endProgram;
       case '':
         break;
       default:
