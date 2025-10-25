@@ -1,22 +1,19 @@
-import 'package:calc_hours/common/extensions.dart';
+import 'package:calc_hours/src/helper/time_calculator_helper.dart';
+import 'package:calc_hours/src/models/time_model.dart';
 import 'package:calc_hours/time_calculator.dart';
 
-import 'calc_time.dart';
-
+/// Calculate average, then print the result
 void calcAvg() {
-  final timeCount = times.length;
-  final avg = _calcAvgTimePerDay(seconds: totalSeconds, timeCount: timeCount);
+  final avg = _calcAvgTimePerDay(seconds: totalSeconds, days: days);
 
-  print('-> Avg: "$avg" for ($timeCount inputs)');
+  print('~> Avg: [${avg.show(hideSeconds: true)}] ($days days)');
 }
 
-String _calcAvgTimePerDay({
+TimeModel _calcAvgTimePerDay({
   required int seconds,
-  required int timeCount,
+  required int days,
 }) {
-  final avgSec = seconds ~/ timeCount;
-  final avgHours = calcHours(avgSec);
-  final avgMins = calcMins(avgSec);
-  return '${avgHours.text}:${avgMins.text}';
+  final avgSec = seconds ~/ days;
+  return TimeCalculatorHelper.getTimeFromSeconds(avgSec);
 }
 

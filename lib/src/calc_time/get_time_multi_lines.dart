@@ -1,6 +1,6 @@
 import 'dart:io';
 
-List<String> getTimesMultiLines() {
+List<String> getTimesMultiLinesInput() {
   List<String> times = [];
   while (true) {
     final time = stdin.readLineSync()!;
