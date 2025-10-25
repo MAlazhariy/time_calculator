@@ -1,3 +1,3 @@
 extension TimeString on int {
-  String get text => '$this'.padLeft(2, '0');
+  String get timePodLeft => '$this'.padLeft(2, '0');
 }

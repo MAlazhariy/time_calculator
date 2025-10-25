@@ -8,7 +8,7 @@ void calcPrice() {
   final salary = int.parse(stdin.readLineSync()!);
 
   print('');
-  print('- [Enter] to calc for [${hours.text}:${mins.text}].');
+  print('- [Enter] to calc for [${hours.timePodLeft}:${mins.timePodLeft}].');
   print('- Or type a time (hh:mm)');
   final input = stdin.readLineSync()!;
   int h = hours;

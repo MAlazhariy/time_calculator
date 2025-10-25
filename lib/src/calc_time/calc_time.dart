@@ -19,7 +19,7 @@ void calcTimes({
   if (!add) {
     print('Enter times:');
   } else {
-    print('Enter times to add to "${hours.text}:${mins.text}:${secs.text}":');
+    print('Enter times to add to "${hours.timePodLeft}:${mins.timePodLeft}:${secs.timePodLeft}":');
   }
   times = getTimesMultiLines();
 
@@ -31,7 +31,7 @@ void calcTimes({
   secs = calcSeconds(totalSeconds);
 
   print('----------');
-  print('-> ${hours.text}:${mins.text}:${secs.text}');
+  print('-> ${hours.timePodLeft}:${mins.timePodLeft}:${secs.timePodLeft}');
   if(calcAverage) calcAvg();
   print('----------');
 }

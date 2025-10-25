@@ -1,5 +1,5 @@
 import 'dart:io';
 
-void endProgram(){
+void endProgram() {
   exit(0);
 }
