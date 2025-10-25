@@ -9,9 +9,10 @@ class TimeModel {
 
   const TimeModel.empty() : this(hours: 0, mins: 0);
 
-  String show() {
-    return "${hours.timePodLeft}:${mins.timePodLeft}${seconds != null && seconds != 0 ? ":${seconds?.timePodLeft}" : ""}";
+  String show({bool hideSeconds = false}) {
+    return "${hours.timePodLeft}:${mins.timePodLeft}${seconds != null && seconds != 0 && !hideSeconds ? ":${seconds?.timePodLeft}" : ""}";
   }
+
 
   @override
   String toString() => show();

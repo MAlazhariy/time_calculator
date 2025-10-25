@@ -6,7 +6,7 @@ import 'package:calc_hours/time_calculator.dart';
 void calcAvg() {
   final avg = _calcAvgTimePerDay(seconds: totalSeconds, days: days);
 
-  print('~> Avg: [$avg] ($days days)');
+  print('~> Avg: [${avg.show(hideSeconds: true)}] ($days days)');
 }
 
 TimeModel _calcAvgTimePerDay({

@@ -33,32 +33,30 @@ abstract class TimeCalculatorHelper {
 
       // Add current seconds to the total seconds.
       totalSeconds += seconds;
-      // Add seconds to the day seconds.
-      daySeconds += seconds;
-
-      // 00:20 = First day
-      // 01:00 = new day
-      // 00:30 -
-      // 00:30 = new day
-      // 00:45 -
-      // 00:16 -
-
-      if (i == 0) {}
 
       if (isNewDay) {
+        // Finalize previous day before starting a new one
+        if (i > 0 && daySeconds > 0) {
+          if (min == null || daySeconds < min) min = daySeconds;
+          if (daySeconds > max) max = daySeconds;
+          // print("> Day $days: ${getTimeFromSeconds(daySeconds)}");
+        }
+
         // Increase days
         days++;
+        // Set daySeconds to current seconds
+        daySeconds = seconds;
       } else {
-        // Calculate min & max by daySeconds
-        if (min == null || daySeconds < min) min = daySeconds;
-        if (daySeconds > max) max = daySeconds;
-        print("> Day $days: ${getTimeFromSeconds(daySeconds)}");
-        // Reset daySeconds cause it's a new day
-        daySeconds = 0;
+        // Add seconds to the day seconds.
+        daySeconds += seconds;
       }
+    }
 
-      // Reset daySeconds cause it's a new day
-      if (isNewDay) daySeconds = 0;
+    // Finalize the last day
+    if (daySeconds > 0) {
+      if (min == null || daySeconds < min) min = daySeconds;
+      if (daySeconds > max) max = daySeconds;
+      // print("> Day $days: ${getTimeFromSeconds(daySeconds)}");
     }
 
     // Set data

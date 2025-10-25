@@ -26,8 +26,9 @@ void calculateTimes({
   TimeCalculatorHelper.calculateTime(times);
 
   print('----------');
-  print('-> $resultTime | Min ($minTime) & Max ($maxTime)');
+  print('-> $resultTime');
   if(calcAverage) calcAvg();
+  print('-> Min ($minTime) | Max ($maxTime)');
   print('----------');
 }
 
