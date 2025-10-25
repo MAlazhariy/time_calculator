@@ -1,5 +1,6 @@
 
 import 'package:calc_hours/src/calc_time/calc_time.dart';
+import 'package:calc_hours/src/models/time_model.dart';
 import 'package:calc_hours/src/execute.dart';
 
 /// How to export `exe` file for windows?
@@ -22,12 +23,14 @@ import 'package:calc_hours/src/execute.dart';
 
 
 List<String> times = [];
-int totalMins = 0;
 int totalSeconds = 0;
-int hours = 0;
-int mins = 0;
-int secs = 0;
+var resultTime = TimeModel.empty();
+var minTime = TimeModel.empty();
+var maxTime = TimeModel.empty();
+
+// Days
+int days = 0;
 
 void main() {
-  execute(calcTimes);
+  execute(calculateTimes);
 }
